@@ -11,7 +11,9 @@ fun ActivitasPertama(modifier: Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         text(
-            stringResource(R.string.prodi)
+            stringResource(R.string.prodi),
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold,
         )
     }
 
