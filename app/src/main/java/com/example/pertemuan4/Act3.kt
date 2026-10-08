@@ -6,6 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 
 
 @composable
@@ -40,6 +41,15 @@ fun ActivitasPertama(modifier: Modifier) {
                     contentDescription = null,
                     modifier = Modifier.size(100.dp).padding(5.dp)
                 )
+                spacer(modifier = Modifier.width(30.dp))
+                column() {
+                    text(
+                        stringResource("Nabil Rafif"),
+                        fontSize = 30.dp
+                        fontFamily =FontFamily.Cursive
+                    )
+                }
+
 
             }
         }
