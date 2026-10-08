@@ -1,67 +1,90 @@
 package com.example.pertemuan4
 
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
-@composable
+@Composable
 fun ActivitasPertama(modifier: Modifier) {
-    column(
+    Column(
         modifier = modifier.padding(top = 100.dp)
-        fillMaxSize(),
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        text(
+        Text(
             stringResource(R.string.prodi),
             fontSize = 35.sp,
             fontWeight = FontWeight.Bold,
         )
-        text (
+        Text (
             stringResource(R.string.univ),
             fontSize = 22.sp
         )
-        spacer(modifier = Modifier .height(25.dp))
+        Spacer(modifier = Modifier .height(25.dp))
         Card(
             modifier = Modifier
                 .fillMaxWidth(1f)
-                .padding(12.dp)
-            Colors = CardDefaults.cardColors(
-                containerColor = colorResource(R.Color.card_0_bg)
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = colorResource(R.color.card_0_bg)
             )
         ) {
             Row(){
-                valgambar = painterResource(R.drawable.Logo Umy)
+                Valgambar = painterResource(R.drawable.LogoUmy)
                 image(
                     painter = gambar,
                     contentDescription = null,
                     modifier = Modifier.size(100.dp).padding(5.dp)
                 )
-                spacer(modifier = Modifier.width(30.dp))
-                column() {
-                    text(
+                Spacer(modifier = Modifier.width(30.dp))
+                Column() {
+                    Text(
                         stringResource("Nabil Rafif"),
                         fontSize = 30.dp
-                        fontFamily =FontFamily.Cursive,
-                        color = Color.White,
+                        fontFamily = FontFamily.Cursive,
+                        color = color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
-                    text(
+                    Text(
                         stringResource(R.string.alamat),
                         fontSize = 20.sp,
                         color = Color.White
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
-
-
             }
         }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ){
+            Text(
+                stringResource(R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
 
+
+            )
+        }
 
     }
 
