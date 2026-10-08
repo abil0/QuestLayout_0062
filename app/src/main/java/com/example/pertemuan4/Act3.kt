@@ -1,5 +1,7 @@
 package com.example.pertemuan4
 
+import androidx.compose.ui.res.stringResource
+
 
 @composable
 fun ActivitasPertama(modifier: Modifier) {
@@ -7,6 +9,11 @@ fun ActivitasPertama(modifier: Modifier) {
         modifier = modifier.padding(top = 100.dp)
         fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-    )
+    ) {
+        text(
+            stringResource(R.string.prodi)
+        )
+    }
+
 }
 
