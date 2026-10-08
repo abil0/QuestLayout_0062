@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 
 
@@ -31,7 +32,17 @@ fun ActivitasPertama(modifier: Modifier) {
             Colors = CardDefaults.cardColors(
                 containerColor = colorResource(R.Color.card_0_bg)
             )
-        )
+        ) {
+            Row(){
+                valgambar = painterResource(R.drawable.Logo Umy)
+                image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier.size(100.dp).padding(5.dp)
+                )
+
+            }
+        }
 
 
     }
